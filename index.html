@@ -34,6 +34,15 @@
 	$(function() {
 		$("#draggable").draggable();
 	});
+	function clearEntry() {
+		var lastIndex = 0;
+		$.each(["*","/","-","+"], function(index, operative) {
+			if (numberLCD.input.value.lastIndexOf(operative) > lastIndex) {
+				lastIndex = numberLCD.input.value.lastIndexOf(operative);
+			}
+		})
+		numberLCD.input.value = numberLCD.input.value.substring(0,lastIndex);
+	}
 	</script>
 </head>
 
@@ -45,7 +54,7 @@
 			</div>
 			<div class="form-group">
 				<input type="button" value="AC" class="btn btn-danger btn-md" onclick="numberLCD.input.value = ''">
-				<input type="button" value="CE" class="btn btn-danger btn-md" onclick="numberLCD.input.value.replace("2","5")">
+				<input type="button" value="CE" id="CE" class="btn btn-danger btn-md" onclick="clearEntry()">
 				<input type="button" value="-" class="btn btn-default btn-md operator" onclick="numberLCD.input.value += '-'">
 				<br>
 				<input type="button" value="7" class="btn btn-primary btn-md" onclick="numberLCD.input.value += '7'">
