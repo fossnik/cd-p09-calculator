@@ -16,6 +16,8 @@
 		height: auto;
 		background-color: #008800;
 		font-weight: bold;
+		margin: auto;
+		margin-top: 80px;
 	}
 	.btn {
 		margin-bottom: 4px;
@@ -30,6 +32,8 @@
 		$("#draggable").draggable();
 	});
 	</script>
+	<title>Project #9 - FCC Advanced Javascript Calculator</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
 <body>
@@ -40,22 +44,22 @@
 			</div>
 			<div class="form-group">
 				<input type="button" value="AC" class="btn btn-danger btn-md" onclick="numberLCD.input.value = ''">
-				<input type="button" value="-" class="btn btn-md operator" onclick="numberLCD.input.value += '-'">
+				<input type="button" value="-" class="btn btn-default btn-md operator" onclick="numberLCD.input.value += '-'">
 				<br>
 				<input type="button" value="7" class="btn btn-primary btn-md" onclick="numberLCD.input.value += '7'">
 				<input type="button" value="8" class="btn btn-primary btn-md" onclick="numberLCD.input.value += '8'">
 				<input type="button" value="9" class="btn btn-primary btn-md" onclick="numberLCD.input.value += '9'">
-				<input type="button" value="+" class="btn btn-md operator" onclick="numberLCD.input.value += '+'">
+				<input type="button" value="+" class="btn btn-default btn-md operator" onclick="numberLCD.input.value += '+'">
 				<br>
 				<input type="button" value="4" class="btn btn-primary btn-md" onclick="numberLCD.input.value += '4'">
 				<input type="button" value="5" class="btn btn-primary btn-md" onclick="numberLCD.input.value += '5'">
 				<input type="button" value="6" class="btn btn-primary btn-md" onclick="numberLCD.input.value += '6'">
-				<input type="button" value="/" class="btn btn-md operator" onclick="numberLCD.input.value += '/'">
+				<input type="button" value="/" class="btn btn-default btn-md operator" onclick="numberLCD.input.value += '/'">
 				<br>
 				<input type="button" value="1" class="btn btn-primary btn-md" onclick="numberLCD.input.value += '1'">
 				<input type="button" value="2" class="btn btn-primary btn-md" onclick="numberLCD.input.value += '2'">
 				<input type="button" value="3" class="btn btn-primary btn-md" onclick="numberLCD.input.value += '3'">
-				<input type="button" value="x" class="btn btn-md operator" onclick="numberLCD.input.value += '*'">
+				<input type="button" value="x" class="btn btn-default btn-md operator" onclick="numberLCD.input.value += '*'">
 				<!-- <input type="button" value="." class="btn btn-primary btn-block" onclick="numberLCD.input.value += '.'"> -->
 				<br>
 				<input type="button" value="0" class="btn btn-primary btn-md" onclick="numberLCD.input.value += '0'">
