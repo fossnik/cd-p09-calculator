@@ -2,15 +2,73 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Project #10 - Advanced FCC - Pomodoro Clock</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
+	<title>Project #9: FCC Advanced Javascript Calculator</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<style>
+	.corners {
+		border-radius: 25px;
+		border: 2px solid #73AD1;
+		padding: 20px;
+		width: 238px;
+		height: auto;
+		background-color: #008800;
+		font-weight: bold;
+	}
+	.btn {
+		margin-bottom: 4px;
+		width: 46px;
+	}
+	.operator {
+		float:right;
+	}
+	</style>
+	<script>
+	$(function() {
+		$("#draggable").draggable();
+	});
+	</script>
 </head>
 
-
+<body>
+	<div id="draggable" class="corners ui-widget-content">
+		<form name="numberLCD">
+			<div class="form-group">
+				<input type="text" class="form-control" id="input" placeholder="0" readonly="readonly">
+			</div>
+			<div class="form-group">
+				<input type="button" value="AC" class="btn btn-danger btn-md" onclick="numberLCD.input.value = ''">
+				<input type="button" value="-" class="btn btn-md operator" onclick="numberLCD.input.value += '-'">
+				<br>
+				<input type="button" value="7" class="btn btn-primary btn-md" onclick="numberLCD.input.value += '7'">
+				<input type="button" value="8" class="btn btn-primary btn-md" onclick="numberLCD.input.value += '8'">
+				<input type="button" value="9" class="btn btn-primary btn-md" onclick="numberLCD.input.value += '9'">
+				<input type="button" value="+" class="btn btn-md operator" onclick="numberLCD.input.value += '+'">
+				<br>
+				<input type="button" value="4" class="btn btn-primary btn-md" onclick="numberLCD.input.value += '4'">
+				<input type="button" value="5" class="btn btn-primary btn-md" onclick="numberLCD.input.value += '5'">
+				<input type="button" value="6" class="btn btn-primary btn-md" onclick="numberLCD.input.value += '6'">
+				<input type="button" value="/" class="btn btn-md operator" onclick="numberLCD.input.value += '/'">
+				<br>
+				<input type="button" value="1" class="btn btn-primary btn-md" onclick="numberLCD.input.value += '1'">
+				<input type="button" value="2" class="btn btn-primary btn-md" onclick="numberLCD.input.value += '2'">
+				<input type="button" value="3" class="btn btn-primary btn-md" onclick="numberLCD.input.value += '3'">
+				<input type="button" value="x" class="btn btn-md operator" onclick="numberLCD.input.value += '*'">
+				<!-- <input type="button" value="." class="btn btn-primary btn-block" onclick="numberLCD.input.value += '.'"> -->
+				<br>
+				<input type="button" value="0" class="btn btn-primary btn-md" onclick="numberLCD.input.value += '0'">
+				<input type="button" value="." class="btn btn-primary btn-md" onclick="numberLCD.input.value += '.'">
+				<input type="button" value="=" class="btn btn-info btn-md" style="width: 96px;" onclick="numberLCD.input.value = eval(numberLCD.input.value);">
+			</div>
+			<div class="form-group">
+			</div>
+		</form>
+	</div>
+</body>
 
 <footer>
-	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
-	<script src="script.js"></script>
 	<!-- <hr style="width: 70%">
 	<div style="font-family: monospace; text-align: center"><a href="http://intracitygeeks.org/">CareerDevs</a> of Providence, RI</div> -->
 </footer>
